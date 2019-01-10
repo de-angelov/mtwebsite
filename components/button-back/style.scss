@@ -1,0 +1,31 @@
+.button-back{
+	display:inline-block;
+	padding: 10px 30px;
+	margin-bottom: 50px;
+	position: relative;
+	border: 2px solid #383838;
+	color: $body-color;
+	text-transform: uppercase;
+
+	img{margin-right: 10px}
+	&:before,&:after{
+		content:" ";
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		background: $bg-color;
+	}
+
+	&:before{
+		border-bottom: 2px solid #383838;
+		transform: rotate(-45deg);
+		top:-10px;
+		left: -10px;
+	}
+	&:after{
+		border-top: 2px solid #383838;	
+		transform: rotate(-45deg);
+		bottom:-10px;
+		right: -10px;
+	}
+}

@@ -1,0 +1,26 @@
+.top,
+.bottom,
+.left,
+.right{
+  width: 15%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  background: rgba(0, 0, 0, 0.2);
+  // color: rgba(0, 0, 0, 0.4);
+}
+
+.top:hover,
+.bottom:hover,
+.left:hover,
+.right:hover{
+  opacity: 1;
+}
+
+.left{
+  left:0;
+}
+
+.right{
+  right:0;
+}

@@ -1,0 +1,37 @@
+@import '../../scss/6-components/all';
+
+.projectContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:flex-start;
+  padding: 10px;
+  min-height: 900px;
+}
+
+.projectContainer > div {
+  margin-left: 10px;
+  
+}
+
+.pageTitle{
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.buttonContainer{
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  align-items: center;
+
+  button {
+    margin-right: 10px;
+    @extend %bordered-button;
+  }
+
+  .active {
+    @extend %bordered-button--active;
+  }
+
+
+}

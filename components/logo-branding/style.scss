@@ -1,0 +1,25 @@
+.container{
+  display: flex;
+  width: auto;
+  height: 50px;
+  align-items: center;
+}
+
+.img{
+  height: 50px;
+  width: auto;
+  border-right: 1px solid black;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+
+.textContainer{
+  width: 150px;
+  height: 50px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  font-size: 12px !important;
+}

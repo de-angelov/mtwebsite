@@ -1,0 +1,52 @@
+@import '../1-settings/settings';
+
+%message-shared {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+%bordered-button {
+  background: none;
+  padding: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 2px solid $primary-color;
+  display: block;
+  // overflow: hidden;
+  position: relative;
+  &:hover{
+    color: $accent-color;
+  }
+
+  &:before,
+  &:after{
+    content: " ";
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    // border:  0px solid $bg-color;
+    border-bottom: 2px solid $primary-color;
+    display: inline-block;
+    top: -10px;
+    left: -10px;
+    background-color: $bg-color;
+    transform: rotate(-45deg);
+    // z-index: 2;
+  }
+
+  &:after{
+    transform: rotate(135deg);
+    left: calc(100% - 9px);
+    top: calc(100% - 9px);
+    // border: 2px solid black;
+  }
+}
+
+%bordered-button--active{
+  border-color: $accent-color;
+  color: $accent-color;
+  &:before, &:after{ 
+    border-color: $accent-color;
+  }
+}

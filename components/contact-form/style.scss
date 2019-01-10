@@ -1,0 +1,26 @@
+@import '../../scss/1-settings/all';
+@import '../../scss/6-components/all';
+
+.form{
+  display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	margin: auto;
+
+	input, textarea{
+		padding: 4px;
+	}
+
+	button{
+		@extend %bordered-button;
+	}
+
+	.errorMessage{
+		font-size: 0.8em;
+		color: red;
+		padding-top: 4px;
+		padding-bottom: 4px;
+	}
+
+}
