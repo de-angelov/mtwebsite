@@ -41,6 +41,10 @@
     top: calc(100% - 9px);
     // border: 2px solid black;
   }
+
+  :focus {
+    outline:0;
+  }
 }
 
 %bordered-button--active{

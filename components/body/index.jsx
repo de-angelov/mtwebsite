@@ -6,11 +6,13 @@ import Navbar from '../navbar';
 import Footer from '../footer';
 
 const Body = (props) => (
-<div className={style.container}>
-  <Navbar />
-    {props.children}
-  <Footer />
-</div>);
+  <div className={style.container}>
+    <Navbar />
+    <div className={style.children}>
+      {props.children}
+    </div>
+    <Footer />
+  </div>);
 
 Body.propTypes = {
   children: PropTypes.element,

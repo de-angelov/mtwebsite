@@ -10,8 +10,15 @@
   justify-content: flex-end;
 
   li {
+    // padding-top: 20px;
+    // padding-bottom: 20px;
+    display: flex;
+  }
+  
+  div{
     padding-top: 20px;
     padding-bottom: 20px;
+    box-sizing: border-box;
   }
 }
 
@@ -29,6 +36,7 @@
 
 
 .activeLink {
+  padding-bottom: 16px !important;
   border-bottom: 4px solid $accent-color;
   color: $accent-color;
 }
@@ -45,11 +53,13 @@
 }
 
 .navbar {
-  height: 50px;
+  height: $header-height;
   display: flex;
+  margin-bottom: 10px;
 
   // align-items: stretch;
   @media screen and (max-width: 900px) {
     display: none;
   }
 }
+

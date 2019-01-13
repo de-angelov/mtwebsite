@@ -1,1 +1,2 @@
-module.exports = require('./admin.router');
+module.exports = require('./general.routes');
+

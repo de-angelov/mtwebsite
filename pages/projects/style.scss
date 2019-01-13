@@ -3,9 +3,9 @@
 .projectContainer{
   display: flex;
   flex-wrap: wrap;
-  justify-content:flex-start;
-  padding: 10px;
-  min-height: 900px;
+  justify-content: flex-start;
+  padding: 10px 0 10px 0;
+  min-height: 250px;
 }
 
 .projectContainer > div {
@@ -25,7 +25,7 @@
   align-items: center;
 
   button {
-    margin-right: 10px;
+    margin-right: 12px;
     @extend %bordered-button;
   }
 

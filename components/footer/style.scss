@@ -1,5 +1,34 @@
+@import '../../scss/1-settings/_all';
+@import '../../scss/6-components/all';
+
 .container{
-  // outline: 5px solid green;
-  // height: 100px;
-  // width: 100%;
+  @extend %container;
+  height: $footer-height;
+  bottom: 0;
+  position: fixed;
+  padding: 10px;
+  background: $bg-color;
+
+}
+
+
+.container
+{
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.1) inset;
+}
+
+
+.container:before, 
+.container:after
+{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+}
+.container:after
+{
+    right:10px;
+    left:auto;
+    transform:skew(8deg) rotate(3deg);
 }

@@ -4,7 +4,7 @@ class GeneralController {
   }
 
 
-  async GetProjectHomePageInfo() {
+  async GetHomePageData() {
     this.database.collection('HomePage').find();
   }
 

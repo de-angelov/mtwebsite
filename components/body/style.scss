@@ -1,6 +1,16 @@
+@import '../../scss/1-settings/_all';
+@import '../../scss/6-components/all';
+
 .container{
-  max-width: 1000px;
-  width: 100%;
-  margin: auto;
+  @extend %container;
   margin-top: 10px;
+  min-height: 100%;
 }
+
+.children{
+  margin-bottom: $footer-height;
+}
+
+
+
+

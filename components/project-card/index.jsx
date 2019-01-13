@@ -4,10 +4,9 @@ import Router from 'next/router';
 import PropTypes from 'prop-types';
 import style from './style.scss';
 
-
 const ProjectCard = (props) => (
   <div className={style.card}>
-    <div className={style.picture}></div>
+    <div className={style.picture} />
     <h4 className={style.title}>{props.Title}</h4>
     <h5 className={style.category}>{props.Category}</h5>
     {/* <Link

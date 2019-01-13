@@ -6,7 +6,9 @@
   height: 100%;
   opacity: 0;
   transition: opacity .3s ease-in-out;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.1);
+  // background: none;
+  border: none;
   // color: rgba(0, 0, 0, 0.4);
 }
 
@@ -17,10 +19,19 @@
   opacity: 1;
 }
 
+.left,
+.right{
+
+}
+
 .left{
   left:0;
 }
 
 .right{
   right:0;
+  img{
+    transform: rotate(180deg);
+    transform-origin: center center;
+  }
 }

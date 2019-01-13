@@ -7,7 +7,8 @@ const init = (app, database) => {
   const controller = new Controller(database);
 
   router
-    .menageRoute({
+    .get('/', (req, res) => res.redirect('/home'))
+    .pageRoute({
       path: '/home',
       render: '/home',
       async getProps() {
@@ -15,7 +16,7 @@ const init = (app, database) => {
         return { images };
       },
     })
-    .menageRoute({
+    .pageRoute({
       path: '/projects',
       render: '/projects',
       async getProps() {
@@ -23,7 +24,7 @@ const init = (app, database) => {
         return { allProjectsPreviews };
       },
     })
-    .menageRoute({
+    .pageRoute({
       path: '/projects/details:id',
       render: '/projects/details:id',
       async getProps(req) {
@@ -36,4 +37,4 @@ const init = (app, database) => {
   app.use('/', router);
 };
 
-module.expors = { init };
+module.exports = { init };

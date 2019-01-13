@@ -37,18 +37,21 @@ export default class Carousel extends Component {
     slides.forEach((slide, i) => {
       const button =
       this.state.activeSlide === i ?
-        (<div 
-          className={style.circleSelected} 
-          key={slide.title} 
-          ></div>) :
-        (<div 
-          className={style.circle} 
-          key={slide.title} 
-          role="button" 
-          onKeyPress={() => 
-            (this.setState({ activeSlide: i}))} onClick={() => (this.setState({ activeSlide: i}))} 
-          >
-          </div>);
+        (
+          <div
+            className={style.circleSelected}
+            key={slide.title}
+          />
+        ) : (
+          <div
+            className={style.circle}
+            key={slide.title}
+            role="button" 
+            onKeyPress={() =>
+              (this.setState({ activeSlide: i}))}
+            onClick={() => (this.setState({ activeSlide: i}))}
+          />
+        );
       results.push(button);
     });
     return results;
@@ -63,7 +66,6 @@ export default class Carousel extends Component {
     return (
       <div className={style.container}>
         <h2 className={style.titleContainer}>
-          {this.state.activeSlide}
           <SlideTitle slide={this.props.slides[this.state.activeSlide]} />
         </h2>
         <div className={style.slideContainer}>

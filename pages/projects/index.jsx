@@ -7,7 +7,16 @@ import { mainProjectCategories } from '../../config';
 
 const placeholder = [
   {
-    Text: 'description',
+    Text: `'descriptiondescription'
+    Text: 'descriptiondescription',
+    Text: 'descriptiondescription',
+    Text: 'descriptiondescription',
+    Text: 'descriptiondescription',
+    Text: 'descriptiondescription',
+    Text: 'descriptiondescription',
+    Text: 'descriptiondescription',
+    Text: 'descriptiondescription',
+    `,
     Category: 'Architecture',
     Title: 'Arch Project',
     Img: 'google bg',
@@ -75,7 +84,7 @@ export default class Projects extends Component {
               onClick={this.handleFilterOnClick}
               className={this.state.showCategory === category ? style.active : null}
             />
-            ))}
+          ))}
       </div>
       <div className={style.projectContainer}>
         {this.state.projects

@@ -17,14 +17,20 @@ export default class NavbarDesktop extends Component {
     this.setState({ pathname: Router.pathname });
   }
 
-  getInitialProps({ req }) {
-    this.setState({ pathname: req.pathname });
-  }
-
   componentDidUpdate() {
     if (this.state.pathname !== Router.pathname) {
       this.setState({ pathname: Router.pathname });
     }
+  }
+
+  // getDerivedStateFromProps() {
+  //   if (this.state.pathname !== Router.pathname) {
+  //     this.setState({ pathname: Router.pathname });
+  //   }
+  // }
+
+  getInitialProps({ req }) {
+    this.setState({ pathname: req.pathname });
   }
 
   render() {
@@ -34,18 +40,17 @@ export default class NavbarDesktop extends Component {
           <LogoBranding />
           <ul className={style.links}>
             {this.props.links.map(({ key, href, label }, index) => (
-              <>
-              {index!== 0 && (<span>/</span>)}
-              <li
-                className={this.state.pathname === href ? style.activeLink : undefined}
-                key={key}
-              > 
-                <Link href={href}>
-                  <a>{label}</a>
-                </Link>
+              <li key={key}>
+                {index !== 0 && (<div>/</div>)}
+                <div
+                  className={this.state.pathname === href ? style.activeLink : undefined}
+                >
+                  <Link href={href}>
+                    <a>{label}</a>
+                  </Link>
+                </div>
               </li>
-              </>
-              ))
+            ))
             }
             <li>
               <LanguageSelector />
@@ -54,7 +59,6 @@ export default class NavbarDesktop extends Component {
         </div>
       </div>);
   }
-
 }
 
 NavbarDesktop.propTypes = {

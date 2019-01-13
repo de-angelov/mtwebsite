@@ -2,7 +2,7 @@
 @import '../../scss/6-components/all';
 
 .form{
-  display: flex;
+	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
@@ -19,8 +19,36 @@
 	.errorMessage{
 		font-size: 0.8em;
 		color: red;
-		padding-top: 4px;
-		padding-bottom: 4px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+
+	
+	input,textarea,select{
+			outline: none;
+			border: 2px solid #383838;
+			padding: 10px;
+			background: none;
+			// margin-bottom: 20px;
+			transition: .3s ease;
+			outline: none;
+	
+		&:hover, &:focus{
+			border-color: $accent-color;
+		}
+	}
+	select{
+		appearance: none;
+	}
+	textarea{
+		resize: vertical;
+	}
+	input[type="submit"],button, input[type="reset"]{
+		//  @extend .button;
+		outline: none;
+	}
+	button{
+		margin-top: 20px;
 	}
 
 }
