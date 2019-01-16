@@ -1,27 +1,39 @@
 @import '../../scss/1-settings/_all';
 .card{
-
-  width: 32.33%;
-  height: 250px;
-  // text-align: center;
+  
+  height: 360px;
   display: flex;
   flex-direction:column;
   margin-bottom: 10px;
+  overflow: hidden;
 
   button{
     background: none;
     text-align: left;
     color: $accent-color;
     border: none;
-    padding: none;
-    padding: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
   }
+
+  width: 32.33%;
+
+  @media screen and (max-width: 1050px) {
+    width: 48%;
+  }
+
+  @media screen and (max-width: 650px) {
+    width: 90%;
+  }
+
 }
 
 .title{
   color: $accent-color;
   margin-top: 5px;
   margin-bottom: 5px;
+
 }
 
 .category{
@@ -31,11 +43,19 @@
 
 .description{
   margin-top: 5px;
-  margin-bottom: 5px;
+  text-overflow: ellipsis;
+
+  div{
+    height: 55px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
 
 .picture{
   width: 100%;
-  height: 100%;
+  height: 200px;
+  min-height: 200px;
   border: 1px solid black;
+  cursor: pointer;
 }

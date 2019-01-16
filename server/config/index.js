@@ -8,7 +8,7 @@ const config = (() => {
   const JWT_EXPIRE_TIME = 172800;
 
   if (env === 'development') {
-    URL = 'mongodb+srv://mtadmin:mt12345@mttest-vzikd.mongodb.net/test?retryWrites=true';
+    URL = 'mongodb+srv://mtadmin:mt12345@mttest-vzikd.mongodb.net/MtWeb?retryWrites=true';
   } else if (env === 'production') {
     URL = 'productionUrl';
   }
@@ -26,4 +26,5 @@ module.exports = {
   PORT: config.PORT,
   URL: config.URL,
   JWT_SECRET: config.JWT_SECRET,
+  ENV: config.env,
 };

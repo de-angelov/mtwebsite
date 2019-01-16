@@ -3,7 +3,7 @@ import ContactMap from '../components/contact-map';
 import ContactForm from '../components/contact-form';
 import style from './style.scss';
 
-const page = () => (
+const Contacts = () => (
   <>
       <div className={style.container}>
         <div className={style.map}>
@@ -13,4 +13,4 @@ const page = () => (
       </div>
   </>
 );
-export default page;
+export default Contacts;

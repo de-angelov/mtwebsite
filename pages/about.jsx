@@ -3,9 +3,9 @@ import ContactMap from '../components/contact-map';
 import ContactForm from '../components/contact-form';
 import style from './style.scss';
 
-const Contacts = () => (
+const About = () => (
   <>
     About Page
   </>
 );
-export default Contacts;
+export default About;

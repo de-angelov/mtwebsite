@@ -2,7 +2,7 @@
   "name": "create-next-example-app",
   "scripts": {
     "dev": "next",
-    "server": "node server/index.js",
+    "serve": "node server/index.js",
     "build": "next build",
     "start": "next start"
   },
@@ -13,7 +13,6 @@
     "express": "^4.16.4",
     "mongodb": "^3.1.10",
     "next": "^7.0.2",
-    "next-express": "^1.0.0",
     "next-i18next": "^0.10.3",
     "node-sass": "^4.10.0",
     "nodemailer": "^4.7.0",
@@ -31,6 +30,7 @@
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.1"
+    "eslint-plugin-react": "^7.11.1",
+    "next-express": "git+https://github.com/dfoverdx/next-express.git"
   }
 }

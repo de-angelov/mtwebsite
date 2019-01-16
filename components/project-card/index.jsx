@@ -18,7 +18,9 @@ const ProjectCard = (props) => (
         test
       </a>
     </Link> */}
-    <p className={style.description}>{props.Text}</p>
+    <div className={style.description}>
+      <div>{props.Text}</div>
+    </div>
     <button
       onClick={() => Router.push({
         pathname: `/projects/details${props.Title}`,

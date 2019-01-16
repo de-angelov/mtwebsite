@@ -2,17 +2,17 @@ const { Router } = require('express');
 
 const Controller = require('./general.controler.js');
 
-const init = (app, database) => {
+const init = async (app, database) => {
   const router = new Router();
   const controller = new Controller(database);
-
   router
     .get('/', (req, res) => res.redirect('/home'))
     .pageRoute({
       path: '/home',
       render: '/home',
-      async getProps() {
-        const images = controller.GetHomePageData();
+      async getProps(req, res) {
+        const images = await controller.GetHomePageData();
+        console.log('images', images);
         return { images };
       },
     })

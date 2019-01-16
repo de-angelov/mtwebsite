@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Home = () => (
+const Error = () => (
   <>
     <p>
       Error
@@ -10,4 +10,4 @@ const Home = () => (
     </p>
   </>
 );
-export default Home;
+export default Error;

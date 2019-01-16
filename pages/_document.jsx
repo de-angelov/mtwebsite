@@ -6,8 +6,8 @@ export default class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <title> MT Design </title>
-          {/* <link rel="stylesheet" href="/_next/static/style.css" /> */}
+          {/* <title> MT Design </title> */}
+          <link rel="stylesheet" href="/_next/static/style.css" />
         </Head>
         <body>
           <Main />
