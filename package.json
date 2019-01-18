@@ -15,6 +15,7 @@
     "next": "^7.0.2",
     "next-i18next": "^0.10.3",
     "node-sass": "^4.10.0",
+    "next-express": "git+https://github.com/dfoverdx/next-express.git",
     "nodemailer": "^4.7.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.1",
@@ -30,7 +31,6 @@
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.1",
-    "next-express": "git+https://github.com/dfoverdx/next-express.git"
+    "eslint-plugin-react": "^7.11.1"
   }
 }

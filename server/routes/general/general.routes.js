@@ -12,7 +12,7 @@ const init = async (app, database) => {
       render: '/home',
       async getProps(req, res) {
         const images = await controller.GetHomePageData();
-        console.log('images', images);
+
         return { images };
       },
     })
@@ -20,7 +20,8 @@ const init = async (app, database) => {
       path: '/projects',
       render: '/projects',
       async getProps() {
-        const allProjectsPreviews = controller.GetAllProjectPreviews();
+        const allProjectsPreviews = await controller.GetAllProjectPreviews();
+        console.log(allProjectsPreviews);
         return { allProjectsPreviews };
       },
     })

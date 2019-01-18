@@ -1,41 +1,12 @@
 import React, { Component } from 'react';
+import nextExpressPage from 'next-express/page';
 import { boundMethod } from 'autobind-decorator';
 import ProjectCard from '../../components/project-card';
 import ButtonStyled from '../../components/button-styled';
 import style from './style.scss';
 import { mainProjectCategories } from '../../config';
 
-const placeholder = [
-  {
-    Text: `'descriptiondescription'
-    Text: 'descriptiondescription',
-    Text: 'descriptiondescription',
-    Text: 'descriptiondescription',
-    Text: 'descriptiondescription',
-    Text: 'descriptiondescription',
-    Text: 'descriptiondescription',
-    Text: 'descriptiondescription',
-    Text: 'descriptiondescription',
-    `,
-    Category: 'Architecture',
-    Title: 'Arch Project',
-    Img: 'google bg',
-  },
-  {
-    Text: 'description',
-    Category: 'Architecture',
-    Title: 'Arch Project2',
-    Img: 'google bg',
-  },
-  {
-    Text: 'description',
-    Category: 'Landscape',
-    Title: 'Landscape Project',
-    Img: 'google bg',
-  },
-];
-
-export default class Projects extends Component {
+class Projects extends Component {
   allText = 'All';
 
   state= {
@@ -44,14 +15,15 @@ export default class Projects extends Component {
   }
 
   componentDidMount() {
-    console.log('componentDidMount', placeholder);
-    this.setState({ projects: placeholder });
+    // console.log('componentDidMount', placeholder);
+    this.setState({ projects: this.props.allProjectsPreviews });
+    console.log('componentDidMount', this.props);
   }
 
-  @boundMethod
-  getInitialProps() {
-    console.log('getInitialProps', this);
-  }
+  // @boundMethod
+  // getInitialProps(props) {
+  //   console.log('getInitialProps', props);
+  // }
 
   @boundMethod
   filterActiveProjects(project) {
@@ -94,3 +66,5 @@ export default class Projects extends Component {
     </>);
   }
 }
+
+export default nextExpressPage(Projects);

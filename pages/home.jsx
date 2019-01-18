@@ -11,8 +11,9 @@ const links = [
 
 const Home = (props) => (
   <>
-    { console.log('result !', props)}
-    <Carousel slides={links} />
+    {console.log('props', props)}
+    {/* { console.log('result !', Object.values(props))} */}
+    <Carousel slides={props.images} />
     <div>
       Lorem ipsum dolor sit amet consectetur adipisicing elit.
       Explicabo sit assumenda, soluta necessitatibus impedit tenetur nulla
