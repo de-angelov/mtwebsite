@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { boundMethod } from 'autobind-decorator';
 
+import { withNamespaces } from '../../utils/localization';
 import style from './style.scss';
 import ButtonStyled from '../button-styled';
-import _app from '../../pages/_app';
+// import _app from '../../pages/_app';
 
 const isEmail = (email) => {
   const regExTest = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -54,16 +55,18 @@ class InputForm extends Component {
         method="POST"
       >
         <div>
-          <h2> WRITE US</h2>
+          <h2>
+            {this.props.t('title')}
+          </h2>
           <p>
-            If you have any questions feel free to contact us.
+            {this.props.t('p')}
           </p>
         </div>
         <div
           className={style.errorMessage}
           style={subjectError ? null : displayNone}
         >
-          Please Include subject!
+          {this.props.t('errorSubject')}
         </div>
         <input
           type="text"
@@ -75,7 +78,7 @@ class InputForm extends Component {
           className={style.errorMessage}
           style={emailError ? null : displayNone}
         >
-          Please include proper email!
+          {this.props.t('errorMail')}
         </div>
         <input
           // type="email"
@@ -88,7 +91,7 @@ class InputForm extends Component {
           className={style.errorMessage}
           style={messageError ? null : displayNone}
         >
-          Please include message!
+          {this.props.t('errorText')}
         </div>
         <textarea
           name="message"
@@ -105,4 +108,4 @@ class InputForm extends Component {
   }
 }
 
-export default InputForm;
+export default withNamespaces('contacts')(InputForm);

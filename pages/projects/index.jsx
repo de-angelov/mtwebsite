@@ -9,13 +9,12 @@ import { mainProjectCategories } from '../../config';
 class Projects extends Component {
   allText = 'All';
 
-  state= {
+  state = {
     showCategory: this.allText,
     projects: [],
   }
 
   componentDidMount() {
-    // console.log('componentDidMount', placeholder);
     this.setState({ projects: this.props.allProjectsPreviews });
     console.log('componentDidMount', this.props);
   }

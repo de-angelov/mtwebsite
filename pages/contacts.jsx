@@ -5,12 +5,12 @@ import style from './style.scss';
 
 const Contacts = () => (
   <>
-      <div className={style.container}>
-        <div className={style.map}>
+    <div className={style.container}>
+      <div className={style.map}>
         <ContactMap />
-        </div>
-        <ContactForm />
       </div>
+      <ContactForm />
+    </div>
   </>
 );
 export default Contacts;

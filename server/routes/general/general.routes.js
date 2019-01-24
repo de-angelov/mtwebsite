@@ -35,7 +35,7 @@ const init = async (app, database) => {
       },
     });
 
-  app.use('/', router);
+  app.use(['/', '/bg', '/en'], router);
 };
 
 module.exports = { init };

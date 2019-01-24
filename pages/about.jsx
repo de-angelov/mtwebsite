@@ -1,11 +1,10 @@
 import React from 'react';
-import ContactMap from '../components/contact-map';
-import ContactForm from '../components/contact-form';
-import style from './style.scss';
+import { withNamespaces } from '../utils/localization';
 
-const About = () => (
+const About = (props) => (
   <>
-    About Page
+    { props.t('about') }
   </>
 );
-export default About;
+
+export default withNamespaces('common')(About);

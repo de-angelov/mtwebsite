@@ -1,10 +1,11 @@
 import React from 'react';
 import style from './style.scss';
+import { withNamespaces } from '../../utils/localization';
 
-const Footer = () => (
+const Footer = (props) => (
   <footer className={style.container}>
-    Copyright 2019 MT Design.
+    { props.t('footer') }
   </footer>
 );
 
-export default Footer;
+export default withNamespaces('common')(Footer);
