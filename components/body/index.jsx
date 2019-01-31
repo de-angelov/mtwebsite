@@ -1,12 +1,16 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
-import style from './style.scss';
+import Head from 'next/head';
 
+import style from './style.scss';
 import Navbar from '../navbar';
 import Footer from '../footer';
 
 const Body = (props) => (
   <div className={style.container}>
+    <Head>
+      <link rel="stylesheet" type="text/css" href={`/_next/static/css/styles.chunk.css?v=${Date.now()}`} />
+    </Head>
     <Navbar />
     <div className={style.children}>
       {props.children}
