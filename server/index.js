@@ -3,6 +3,7 @@ const express = require('express');
 const nextExpressServer = require('next-express/server');
 
 const bodyParser = require('body-parser');
+const morgan = require('morgan');
 
 const { MongoClient } = require('mongodb');
 
@@ -23,15 +24,14 @@ const url = config.URL;
 MongoClient
   .connect(url)
   .then((database) => {
-
     nextapp
       .prepare()
       .then(() => {
-
         const server = nextExpress();
-        
-        server.use(bodyParser.json());
 
+        server.use(bodyParser.json());
+        // app.use(morgan('dev'));
+        server.use(morgan('dev'));
         router.init(server, database);
 
         localizationMiddleware(localization, nextapp, server);

@@ -1,7 +1,7 @@
 /* eslint-disable class-methods-use-this */
 
 // var path = require('path');
-var fs = require('fs');
+// var fs = require('fs');
 
 class GeneralController {
   constructor(database) {
@@ -49,20 +49,4 @@ class GeneralController {
   }
 }
 
-
-
-
-
-  // async GetHomePageData() {
-  //   // console.log('GetHomePageData', this.db);
-  //   const data = 
-  //   await this.db.collection('HomePageImages').find({ });
-
-  //   // data.toArray((err, x) => {
-  //   //   console.log('HomePageImages', x); // output all records
-  //   // });
-  //   data.toArray().then()
-  //   console.log('data.toArray', );
-  //   // return result;
-  // }
 module.exports = GeneralController;

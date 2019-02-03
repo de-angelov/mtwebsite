@@ -5,8 +5,9 @@ import style from './style.scss';
 const Slide = (props) => (
   <div style={props.style} className={style.imgContainer}>
     <img
-    className={style.img}
-    src={props.slide.img}
+      alt="slide"
+      className={style.img}
+      src={props.slide.img}
     />
   </div>);
 

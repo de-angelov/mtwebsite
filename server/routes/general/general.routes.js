@@ -17,11 +17,11 @@ const init = async (app, database) => {
       },
     })
     .pageRoute({
-      path: '/projects',
-      render: '/projects',
+      path: 'projects',
+      render: 'projects',
       async getProps() {
         const allProjectsPreviews = await controller.GetAllProjectPreviews();
-        console.log(allProjectsPreviews);
+        // console.log('!!!===> allProjectsPreviews');
         return { allProjectsPreviews };
       },
     })
