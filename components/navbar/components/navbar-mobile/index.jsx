@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link';
 import PropTypes from 'prop-types';
 import style from './style.scss';
 
 import LanguageSelector from '../../../language-selector';
 import LogoBranding from '../../../logo-branding';
-
+import { Link } from '../../../../utils/localization';
 
 class NavbarMobile extends Component {
   state = {

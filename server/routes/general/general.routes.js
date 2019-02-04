@@ -1,27 +1,26 @@
 const { Router } = require('express');
 
-const Controller = require('./general.controler.js');
+const Controler = require('./general.controler.js');
 
 const init = async (app, database) => {
   const router = new Router();
-  const controller = new Controller(database);
+  const controler = new Controler(database);
   router
-    .get('/', (req, res) => res.redirect('/home'))
     .pageRoute({
       path: '/home',
       render: '/home',
       async getProps(req, res) {
-        const images = await controller.GetHomePageData();
+        const images = await controler.GetHomePageData();
 
         return { images };
       },
     })
     .pageRoute({
-      path: 'projects',
-      render: 'projects',
+      path: '/projects',
+      render: '/projects',
       async getProps() {
-        const allProjectsPreviews = await controller.GetAllProjectPreviews();
-        // console.log('!!!===> allProjectsPreviews');
+        const allProjectsPreviews = await controler.GetAllProjectPreviews();
+        console.log('!!!===> allProjectsPreviews');
         return { allProjectsPreviews };
       },
     })
@@ -30,10 +29,11 @@ const init = async (app, database) => {
       render: '/projects/details:id',
       async getProps(req) {
         const id = req.params.category;
-        const projectDetails = controller.GetProjectDetailsbyId(id);
+        const projectDetails = controler.GetProjectDetailsByID(id);
         return { projectDetails };
       },
-    });
+    })
+    .get('/', (req, res) => res.redirect('/home'));
 
   app.use(['/', '/bg', '/en'], router);
 };

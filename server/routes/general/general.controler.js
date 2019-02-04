@@ -3,7 +3,7 @@
 // var path = require('path');
 // var fs = require('fs');
 
-class GeneralController {
+class GeneralControler {
   constructor(database) {
     this.db = database.db('MtWeb');
   }
@@ -49,4 +49,4 @@ class GeneralController {
   }
 }
 
-module.exports = GeneralController;
+module.exports = GeneralControler;

@@ -23,7 +23,7 @@ const ProjectCard = React.forwardRef((props, ref) => (
     </div>
     <button
       onClick={() => Router.push({
-        pathname: `/projects/details${props.Title}`,
+        pathname: `/projects/details:${props.Title}`,
         asPath: `/projects/${props.Title}`,
       })
     }

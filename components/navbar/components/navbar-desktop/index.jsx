@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import Link from 'next/link';
+// import Link from 'next/link';
 import PropTypes from 'prop-types';
 import Router from 'next/router';
 
 import style from './style.scss';
 
+import { Link } from '../../../../utils/localization';
 import LanguageSelector from '../../../language-selector';
 import LogoBranding from '../../../logo-branding';
 
