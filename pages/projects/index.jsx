@@ -45,19 +45,12 @@ class Projects extends Component {
     projects: result,
   };
 
-  constructor(props) {
-    super(props);
 
-    // console.log(result);
-    // this.state.projects = result;
-    //  props.allProjectsPreviews;
-  }
-
-  componentDidMount() {
-    // this.props.allProjectsPreviews && this.setState({ projects: this.props.allProjectsPreviews });
-    // this.setState({ projects: this.props.allProjectsPreviews });
-    console.log('componentDidMount', this.props);
-  }
+  // componentDidMount() {
+  //   // this.props.allProjectsPreviews && this.setState({ projects: this.props.allProjectsPreviews });
+  //   // this.setState({ projects: this.props.allProjectsPreviews });
+  //   console.log('componentDidMount', this.props);
+  // }
 
   // create automaticly by next-express
   // @boundMethod
@@ -118,4 +111,4 @@ class Projects extends Component {
   }
 }
 
-export default nextExpressPage(Projects);
+export default Projects;

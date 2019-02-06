@@ -7,15 +7,15 @@ const init = async (app, database) => {
   const controler = new Controler(database);
 
   router
-    .get('/home', (req, res, next) => {
+    .get('/home', async (req, res, next) => {
       const images = await controler.GetHomePageData();
       res.send({ images });
     })
-    .get('/projects/all', (req, res, next) => {
+    .get('/projects/all', async (req, res, next) => {
       const projects = await controler.GetAllProjectsPreviews();
       res.send({ projects });
     })
-    .get('/projects:id', (req, res, next) => {
+    .get('/projects:id', async (req, res, next) => {
       const id = req.params.category;
       const projectDetails = await controler.GetProjectDetailsByID(id);
       res.send({ projectDetails });
